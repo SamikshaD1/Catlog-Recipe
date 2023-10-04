@@ -37,7 +37,7 @@ body {
       #252525 -16.65%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("http://127.0.0.1:3000/recipies/images/Rectangle%2020%20(2).png");
+    url("./images/Rectangle\ 20\ \(2\).png");
   height: 355px;
   margin: 0 50px;
   border-radius: 30px;

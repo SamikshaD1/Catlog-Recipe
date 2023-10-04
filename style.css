@@ -1,0 +1,257 @@
+body {
+  font-family: Poppins;
+  margin: 0;
+  padding: 0;
+}
+/* navbar section  */
+.navbar {
+  display: flex;
+  padding: 0 50px;
+  margin: 1.5vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 3vw;
+}
+.nav2 h4{
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.nav2 h4:hover{
+  transform: scale(1.2);
+}
+#demo {
+  display: none;
+}
+#logo {
+  display: flex;
+  justify-content: center;
+}
+/* image section  */
+.heros-image {
+  background-image: linear-gradient(
+      90deg,
+      #252525 -16.65%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("http://127.0.0.1:3000/recipies/images/Rectangle%2020%20(2).png");
+  height: 355px;
+  margin: 0 50px;
+  border-radius: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+   margin: 30px;
+}
+.hero-text h1,
+.hero-text h4 {
+  color: white;
+}
+
+/* header section  */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+}
+.search-bar > input {
+  display: flex;
+  width: 1050px;
+  border-radius: 2px 0px 0px 2px;
+  background: #f3f3f3;
+  border: none;
+  padding: 12px;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+.filter-options {
+  display: inline-flex;
+  gap: 1vw;
+  margin-top: 1vw;
+  transition-duration: 0.4s;
+}
+.filter-options>#showAll:hover
+{
+   background-color: #f1e31d;
+   transform: scale(1.1);
+   font-size: 20px;
+   cursor: pointer;
+}
+.filter-options>#showVeg:hover{
+  transform: scale(1.1);
+  background-color: #ee8a07;
+  font-size: 20px;
+  cursor: pointer;
+}
+.filter-options>#showNonVeg:hover{
+  transform: scale(1.1);
+  background-color:#992d06 ;
+  font-size: 20px;
+  cursor: pointer;
+}
+#showAll {
+  border-radius: 10px;
+  background: #eaaa00;
+  width: 236.8px;
+  height: 86px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+#showVeg {
+  border-radius: 10px;
+  background: #c4d600;
+  width: 236.8px;
+  height: 86px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+#showNonVeg {
+  border-radius: 10px;
+  background: #dc582a;
+  width: 236.8px;
+  height: 86px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+/* section main  */
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.rating-filter {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* footer section  */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  color: #253d4e;
+}
+.footer p{
+  transition-duration: 0.4s;
+}
+.footer p:hover{
+  transform: scale(1.1);
+}
+.footer button{
+   transition-duration: 0.4s;
+}
+.footer button:hover{
+  transform: scale(1.1);
+}
+
+/* card section  */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container > img {
+  border-radius: 16px;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 12px;
+  column-gap: 12px;
+}
+.card {
+  background-color: #fff;
+  width: 250px;
+  height: 315px;
+  border-radius: 16px;
+  padding: 1vw;
+  border: 1px solid rgb(233, 229, 229);
+}
+.card:hover {
+  box-shadow: 0px 3px 8px -1px rgb(48, 209, 27),
+    0px 0px 1px 0px rgb(255, 169, 9);
+}
+
+.image-container > img {
+  width: 200px;
+  height: 200px;
+}
+
+.like-button {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rating {
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    background-color:#ebe1e1;
+    padding: 20px;
+  }
+  .nav2 h4,
+  .nav2 img {
+    display: none;
+  }
+  #demo {
+    display: block;
+    font-size: 20px;
+  }
+  .filter-options{
+    flex-direction: column;
+  }
+/* .search-bar{
+  max-width: 80%;
+} */
+.search-bar{
+  
+  justify-content: center;
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+.search-bar input{
+  max-width: 300px;
+}
+.main{
+  flex-direction: column;
+  align-items: center;
+}
+.catalog{
+grid-template-columns: 250px;
+}
+.footer{
+  flex-direction: column;
+  align-items: center;
+}
+}

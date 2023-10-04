@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Recipe Catalog</title>
+    </head>
+    <body>
+        <!-- Navbar Section  -->
+        <section class="navbar">
+            <div class="nav1"><img src="./images/Cookpal 1.png" alt="logo"></div>
+            <div class="nav2">
+                <h4 style="color: #509E2F;">Home</h4>
+                <h4>Explore</h4>
+                <h4>Help</h4>
+                <img src="./images/Ellipse 2.png" style="height: 42px;"
+                    alt="img">
+                <i class="fa-solid fa-bars" id="demo"></i>
+            </div>
+        </section>
+        <!-- image section  -->
+        <section>
+            <div class="heros-image">
+                <div class="hero-text">
+                    <h3 style="color:#DC582A">Trending now</h3>
+                    <h1 style="font-size:50px">Mike’s famous salad
+                        with cheese</h1>
+
+                    <h4>By John Mike</h4>
+                </div>
+            </div>
+        </section>
+       
+        <!-- header section  -->
+        <header class="header" style="padding: 30px;">
+            <h1>Search For Recipes</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput"
+                    placeholder="Search recipes...">
+                <button onclick="search()"
+                    style="background-color: #509E2F;border: none;border-radius: 2px;">
+                    <i class="fa-solid fa-magnifying-glass"
+                        style="background-color: #509E2F;padding: 10px;color: #fff;cursor: pointer;"></i>
+                </button>
+
+            </div>
+            <div class="filter-options">
+                <button id="showAll" onclick="filter('all')">Show All Recipe</button>
+                <button id="showVeg" onclick="filter('veg')">Show Only Veg</button>
+                <button id="showNonVeg" onclick="filter('nonveg')">Show Only
+                    Non-Veg</button>
+            </div>
+        </header>s
+
+        <!-- main-bar section  -->
+        <section class="main" style="padding: 30px;">
+            <div class="rating-filter">
+                <h1>Filters</h1>
+                <label for="above45">
+                    <input type="radio" id="above40" name="ratingFilter"
+                        value="above45" onclick="filter('highRating')">Rating
+                    Above 4.0
+                </label>
+                <label for="below40">
+                    <input type="radio" id="below40" name="ratingFilter"
+                        value="below40" onclick="filter('lowRating')">Rating
+                    Below 4.0</label>
+            </div>
+
+            <!-- card section  -->
+            <section class="catalog">
+                <!-- <div class="card">
+                <div class="image-container">
+                    <img src="https://source.unsplash.com/random?veggies" alt="Veggie Delight">
+                </div>
+                <div style="color: #A1A1A1;font-size: 15px;">Veg</div>
+                <div style="display: flex;align-items: center;justify-content: space-between;">
+                    <h1>Veggie Delight</h1>
+                    <div class="rating"><i class="fa-solid fa-star"
+                            style="color: yellow;"></i><span
+                            style="color: #A1A1A1;font-size: 15px;">4.2</span></div>
+                </div>
+                <div
+                    style="display: flex;justify-content:space-between;align-items: center;">
+                    <p>30 min</p>
+                    <div>
+                        <button class="like-button"><i class="fa-regular fa-heart"></i></button>
+                        <button class="like-button"><i class="fa-regular fa-comment"></i></button>
+                    </div>
+                </div>
+            </div> -->
+            </section>
+
+        </section>
+
+        <!-- footer Section  -->
+        <section class="footer" style="bottom: 0; padding: 30p;">
+            <div>
+                <img src="./images/Cookpal 1.png" alt>
+                <p style="width: 290px;">Cookpal is a recipe website with a
+                    wide variety of delicious
+                    recipes, easy-to-use search function. Join our community and
+                    let's cook together!</p>
+            </div>
+            <div class="link">
+                <h1>Company</h1>
+                <p>Home</p>
+                <p>Explore</p>
+                <p>Team</p>
+                <p>About us</p>
+                <p>Activity</p>
+            </div>
+            <div>
+                <h1>Resources</h1>
+                <p>Blog</p>
+                <p>Use Cases</p>
+                <p>Testimonials</p>
+                <p>Insights</p>
+            </div>
+            <div>
+                <img src="./images/Cookpal 1.png" alt>
+                <p style="width: 400px;">Ut risus mattis interdum faucibus
+                    facilisi. Facilisi purus
+                    accumsan aliquam.</p>
+                <div>
+                    <input style="font-size: 16px;padding: 12px 16px;"
+                        type="text" id="Your Email" placeholder="Your Email @">
+                    <button class="subBtn"
+                        style="padding: 12px 16px;font-size: 16px;color: #fff; background-color: #509E2F;border-radius: 4px;border: none; cursor: pointer;"
+                        onclick="subBtn()">Subscribe</button>
+                </div>
+            </div>
+        </section>
+        <main id="recipeList">
+            <!-- Recipe cards will be dynamically added here -->
+        </main>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+            integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
